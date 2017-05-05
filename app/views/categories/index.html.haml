@@ -1,0 +1,16 @@
+%div.row
+  %div.container  
+    %h1
+      Category Listing
+    %table#categories.table.table-bordered.table-hover.table-striped
+      %thead
+        %tr
+          %th 标题
+          %th 描述
+      %tbody
+        - @categories.each do |cat|
+          %tr
+            %td
+              = cat["name"]
+            %td
+              = cat["desc"]

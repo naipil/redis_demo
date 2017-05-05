@@ -1,0 +1,16 @@
+%div.row
+  %div.container
+    %h1
+      Language Listing
+    %table.table.table-bordered.table-striped.table-hover
+      %thead
+        %tr
+          %th 标题
+          %th 内容
+      %tbody
+        - @languages.each do |lang|
+          %tr
+            %td
+              = lang["name"]
+            %td
+              = lang["desc"]

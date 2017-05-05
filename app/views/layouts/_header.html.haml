@@ -1,0 +1,10 @@
+%nav.navbar.navbar-inverse{role: "navigation"}
+  .container-fluid
+    .navbar-header
+      %a.navbar-brand Welcome
+    %div
+      %ul.nav.navbar-nav
+        %li{ :class => ("active" if params[:controller] == "languages")}
+          = link_to 'Language', languages_url
+        %li{ :class => ("active" if params[:controller] == "categories")}
+          = link_to 'Category', categories_url
